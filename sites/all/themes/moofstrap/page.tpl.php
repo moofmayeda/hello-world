@@ -95,18 +95,18 @@
             <div id="name-and-slogan">
               <?php if ($site_name): ?>
                 <?php if ($title): ?>
-                  <div id="site-name"><h1>
+                  <div id="site-name"><h1 class="blog-title">
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
                   </h1></div>
                 <?php else: /* Use h1 when the content title is empty */ ?>
-                  <h1 id="site-name">
+                  <h1 id="site-name" class="blog-title">
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
                   </h1>
                 <?php endif; ?>
               <?php endif; ?>
 
               <?php if ($site_slogan): ?>
-                <div id="site-slogan"><h3><?php print $site_slogan; ?></h3></div>
+                <div id="site-slogan"><h3 class="blog-description"><?php print $site_slogan; ?></h3></div>
               <?php endif; ?>
             </div> <!-- /#name-and-slogan -->
           <?php endif; ?>
