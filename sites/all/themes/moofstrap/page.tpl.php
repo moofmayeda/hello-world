@@ -95,9 +95,9 @@
             <div id="name-and-slogan">
               <?php if ($site_name): ?>
                 <?php if ($title): ?>
-                  <div id="site-name"><strong>
+                  <div id="site-name"><h1>
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                  </strong></div>
+                  </h1></div>
                 <?php else: /* Use h1 when the content title is empty */ ?>
                   <h1 id="site-name">
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
@@ -119,12 +119,12 @@
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      <div id="breadcrumb" class="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
     <?php print $messages; ?>
 
-    <div id="main-wrapper"><div id="main" class="clearfix container">
+    <div id="main-wrapper"><div class="clearfix container">
 
       <div id="content" class="column"><div class="section">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
