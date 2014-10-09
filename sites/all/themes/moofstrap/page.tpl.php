@@ -111,8 +111,10 @@
             </div> <!-- /#name-and-slogan -->
           <?php endif; ?>
         </div>
+        <div class="collapse navbar-collapse">
+          <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix', 'nav', 'navbar-nav', 'navbar-right')))); ?>
+        </div>
         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix', 'nav', 'navbar-nav')))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix', 'nav', 'navbar-nav', 'navbar-right')))); ?>
       </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
 

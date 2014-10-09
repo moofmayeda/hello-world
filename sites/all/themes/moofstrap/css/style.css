@@ -10,3 +10,7 @@ p {
   float: left;
   padding-left: 20px;
 }
+
+#site-name {
+  float: left;
+}
