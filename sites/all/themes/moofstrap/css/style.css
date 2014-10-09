@@ -1,3 +1,12 @@
 p {
   color: red;
 }
+
+#logo {
+  float: left;
+}
+
+#name-and-slogan {
+  float: left;
+  padding-left: 20px;
+}
