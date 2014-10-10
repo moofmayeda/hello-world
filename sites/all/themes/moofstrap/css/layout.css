@@ -1,4 +1,4 @@
-#sidebar-first,
+/*#sidebar-first,
 #main,
 #sidebar-second {
   float: left;
@@ -24,7 +24,7 @@ body.sidebar-second #main-squeeze {
 body.two-sidebars #main-squeeze {
   margin: 0 20px;
 }
-
+*/
 #logo {
   float: left;
 }
@@ -38,7 +38,7 @@ body.two-sidebars #main-squeeze {
   float: left;
 }
 
-.sidebar-module {
+/*.sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
 }
@@ -52,3 +52,4 @@ body.two-sidebars #main-squeeze {
 .sidebar-module-inset ol:last-child {
   margin-bottom: 0;
 }
+*/
