@@ -74,7 +74,21 @@
 ?>
 
   <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+
+      <?php print render($page['header']); ?>
+
+    </div></div> <!-- /.section, /#header -->
+
     <nav class="top-bar" data-topbar>
+      <?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      <?php endif; ?>
+
       <ul class="title-area">
         <?php if ($site_name || $site_slogan): ?>
           <div id="name-and-slogan">
@@ -86,7 +100,7 @@
               <?php else: /* Use h1 when the content title is empty */ ?>
                 <li class="name"><h1 id="site-name">
                   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                </h1></li></class>
+                </h1></li>
               <?php endif; ?>
             <?php endif; ?>
 
@@ -98,18 +112,6 @@
         <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
     </nav>
-    <div id="header"><div class="section clearfix">
-
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
-
-      <?php print render($page['header']); ?>
-
-    </div></div> <!-- /.section, /#header -->
 
     <?php if ($main_menu || $secondary_menu): ?>
       <div id="navigation"><div class="section">
@@ -158,4 +160,3 @@
     </div></div> <!-- /.section, /#footer -->
 
   </div></div> <!-- /#page, /#page-wrapper -->
-
