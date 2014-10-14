@@ -118,14 +118,8 @@
       </ul>
 
       <section class="top-bar-section">
-        <ul class="right">
-          <?php foreach ($main_menu as $link); { ?>
-            <?php
-              echo '<li class="divider"></li><li><a href="?q=' . $link['href'] . '">' . $link['title'] . '</a></li>';
-           } ?>
-
-          <li class="divider"></li>
-        </ul>
+        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix', 'right')))); ?>
+        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix', 'right')))); ?>
       </section>
     </nav>
 
