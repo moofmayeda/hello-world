@@ -112,19 +112,19 @@
 
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">Home</a></h1>
+          <h1><a href="/">Home</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <ul class="right">
-          <?php if ($main_menu || $secondary_menu): ?>
-            <div id="navigation"><div class="section">
-              <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-            </div></div> <!-- /.section, /#navigation -->
-          <?php endif; ?>
+          <?php foreach ($main_menu as $link); { ?>
+            <?php
+              echo '<li class="divider"></li><li><a href="?q=' . $link['href'] . '">' . $link['title'] . '</a></li>';
+           } ?>
+
+          <li class="divider"></li>
         </ul>
       </section>
     </nav>
