@@ -80,7 +80,6 @@
 
       <?php print render($page['header']); ?>
 
-    </div></div> <!-- /.section, /#header -->
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -93,12 +92,7 @@
           <?php if ($title): ?>
             <div id="site-name"><span class="name"><h1>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span>
-                <?php
-                print $site_name;
-                ?>
-                <?php if ($site_slogan): ?>
-                  <span id="site-slogan"><?php print $site_slogan; ?></span>
-                <?php endif; ?>
+                <?php print $site_name; ?>
               </span></a>
             </h1></span></div>
           <?php else: /* Use h1 when the content title is empty */ ?>
@@ -107,12 +101,19 @@
             </h1></span>
           <?php endif; ?>
         <?php endif; ?>
+        <?php if ($site_slogan): ?>
+          <span id="site-slogan"><?php print $site_slogan; ?></span>
+        <?php endif; ?>
       </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
+    </div></div> <!-- /.section, /#header -->
     <nav class="top-bar" data-topbar>
 
       <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Home</a></h1>
+        </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
 
