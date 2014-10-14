@@ -80,9 +80,6 @@
 
       <?php print render($page['header']); ?>
 
-<<<<<<< HEAD
-=======
-
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -127,13 +124,11 @@
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="row"><?php print $breadcrumb; ?></div>
->>>>>>> fresh_start
+
     <?php endif; ?>
 
     <?php print $messages; ?>
 
-<<<<<<< HEAD
-=======
     <div id="main-wrapper"><div id="main" class="clearfix row">
       <div class="large-4 columns">
         <?php if ($page['sidebar_first']): ?>
@@ -143,7 +138,7 @@
         <?php endif; ?>
       </div>
       <div id="content" class="column columns large-4"><div class="section">
->>>>>>> fresh_start
+
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -156,8 +151,6 @@
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 
-<<<<<<< HEAD
-=======
       <div class="large-4 columns">
         <?php if ($page['sidebar_second']): ?>
           <div id="sidebar-second" class="column sidebar"><div class="section">
@@ -169,12 +162,7 @@
     </div></div> <!-- /#main, /#main-wrapper -->
 
     <div id="footer"><div class="section row">
->>>>>>> fresh_start
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
 
   </div></div> <!-- /#page, /#page-wrapper -->
-<<<<<<< HEAD
-=======
-
->>>>>>> fresh_start

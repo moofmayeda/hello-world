@@ -8,11 +8,8 @@ stylesheets[all][] = css/foundation.css
 scripts[] = js/vendor/modernizr.js
 scripts[] = js/vendor/jquery.js
 scripts[] = js/vendor/fastclick.js
-<<<<<<< HEAD
-=======
 scripts[] = js/foundation/foundation.js
 scripts[] = js/foundation/foundation.topbar.js
->>>>>>> fresh_start
 regions[header] = Header
 regions[highlighted] = Highlighted
 regions[help] = Help
