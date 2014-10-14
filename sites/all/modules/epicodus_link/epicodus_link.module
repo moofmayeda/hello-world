@@ -1,0 +1,5 @@
+<?php
+/**
+ * @file
+ * A block module that adds an Epicodus icon and tagline.
+ */
