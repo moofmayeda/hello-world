@@ -82,36 +82,37 @@
 
     </div></div> <!-- /.section, /#header -->
 
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      </a>
+    <?php endif; ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <div id="name-and-slogan">
+        <?php if ($site_name): ?>
+          <?php if ($title): ?>
+            <div id="site-name"><span class="name"><h1>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span>
+                <?php
+                print $site_name;
+                ?>
+                <?php if ($site_slogan): ?>
+                  <span id="site-slogan"><?php print $site_slogan; ?></span>
+                <?php endif; ?>
+              </span></a>
+            </h1></span></div>
+          <?php else: /* Use h1 when the content title is empty */ ?>
+            <span class="name"><h1 id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </h1></span>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div> <!-- /#name-and-slogan -->
+    <?php endif; ?>
+
     <nav class="top-bar" data-topbar>
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
 
       <ul class="title-area">
-        <?php if ($site_name || $site_slogan): ?>
-          <div id="name-and-slogan">
-            <?php if ($site_name): ?>
-              <?php if ($title): ?>
-                <div id="site-name"><li class="name"><h1>
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span>
-                    <?php
-                    print $site_name;
-                    ?>
-                    <?php if ($site_slogan): ?>
-                      <span id="site-slogan"><?php print $site_slogan; ?></span>
-                    <?php endif; ?>
-                  </span></a>
-                </h1></li></div>
-              <?php else: /* Use h1 when the content title is empty */ ?>
-                <li class="name"><h1 id="site-name">
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                </h1></li>
-              <?php endif; ?>
-            <?php endif; ?>
-          </div> <!-- /#name-and-slogan -->
-        <?php endif; ?>
         <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
 
