@@ -1848,7 +1848,10 @@ meta.foundation-mq-topbar {
           box-shadow: 0 0px 0 1px "", 0 7px 0 1px "", 0 14px 0 1px ""; }
   .top-bar.expanded {
     height: auto;
-    background: transparent; }
+<<<<<<< HEAD
+=======
+    background: #333333; }
+>>>>>>> fresh_start
     .top-bar.expanded .title-area {
       background: #333333; }
     .top-bar.expanded .toggle-topbar a {
