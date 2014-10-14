@@ -2,4 +2,32 @@
 /**
  * @file
  * A block module that adds an Epicodus icon and tagline.
+ *
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *  Which path of the site we're using to display help
+ * @param arg
+ *  Array that holds the current path as returned from arg() function
  */
+function epicodus_link_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#epicodus_link":
+      return '<p>' . t("Displays an icon and link to Epicodus") . '</p>';
+      break;
+  }
+}
+/**
+ * Implements hook_block_info().
+ */
+function epicodus_link_block_info() {
+  $blocks['epicodus_link'] = array(
+    // The name that will appear in the block list.
+    'info' => t('Epicodus link'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
