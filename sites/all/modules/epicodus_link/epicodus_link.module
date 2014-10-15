@@ -28,6 +28,20 @@ function epicodus_link_block_info() {
     'info' => t('Epicodus link'),
     // Default setting.
     'cache' => DRUPAL_CACHE_PER_ROLE,
+    // Usable in an administrative context
+    'properties' => ['administrative' => True],
   );
   return $blocks;
+}
+
+function epicodus_link_block_view($delta = '') {
+  switch ($delta) {
+    case 'epicodus_link':
+      $block['subject'] = t('Epicodus link');
+      if (user_access('administer blocks')) {
+        $variables = array('path' => 'http://www.epicodus.com', 'theme' => 'link', 'text' => 'Powered by Epicodus', 'options' => array('attributes' => array('class' => array('strong')), 'html' => FALSE));
+        $block['content'] = theme('link', $variables);
+      }
+    return $block;
+  }
 }
