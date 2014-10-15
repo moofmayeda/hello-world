@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * A block module that adds an Epicodus icon and tagline.
+ * A block module that adds an Epicodus tagline.
  *
  * Implements hook_help().
  *
@@ -15,7 +15,7 @@
 function epicodus_link_help($path, $arg) {
   switch ($path) {
     case "admin/help#epicodus_link":
-      return '<p>' . t("Displays an icon and link to Epicodus") . '</p>';
+      return '<p>' . t("Displays a link to Epicodus") . '</p>';
       break;
   }
 }
@@ -37,10 +37,10 @@ function epicodus_link_block_info() {
 function epicodus_link_block_view($delta = '') {
   switch ($delta) {
     case 'epicodus_link':
-      $block['subject'] = t('Epicodus link');
+      $block['subject'] = NULL;
       if (user_access('administer blocks')) {
-        $variables = array('path' => 'http://www.epicodus.com', 'theme' => 'link', 'text' => 'Powered by Epicodus', 'options' => array('attributes' => array('class' => array('strong')), 'html' => FALSE));
-        $block['content'] = theme('link', $variables);
+        $variables = array('path' => 'http://www.epicodus.com', 'theme' => 'link', 'text' => 'Epicodus', 'options' => array('attributes' => array('class' => array('strong')), 'html' => FALSE));
+        $block['content'] = '<h6>Site built by an ' . theme('link', $variables) . ' graduate</h6>';
       }
     return $block;
   }
