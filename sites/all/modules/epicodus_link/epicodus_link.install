@@ -1,0 +1,11 @@
+<?php
+
+// Put the epicodus_link block in the footer.
+function epicodus_link_update_7100() {
+  db_update('block')
+    ->fields(array(
+      'region' => 'footer',
+    ))
+    ->condition('module', 'epicodus_link')
+    ->execute();
+}
