@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gallery of Moofs feature.
+ */
+
+include_once 'gallery_of_moofs.features.inc';
